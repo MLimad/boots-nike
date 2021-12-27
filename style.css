@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  min-height: 420px;
+  /* background-color: #F0ECE3; */
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px 10px;
+  z-index: 1;
+  /* border:1px solid #DFD3C3; */
+  transform: scale(.9);
+  transition: .5s;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card:hover{
+  transform: scale(1);
+
+}
+
+.card::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f26480;
+  clip-path: circle(26% at 50% 50%);
+  transition: 0.5s;
+}
+
+.card::before {
+  content: "nike";
+  top: 60%;
+  left: 0;
+  position: absolute;
+  font-size: 9em;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  font-weight: 700
+}
+
+.card:hover:after {
+  clip-path: circle(20% at 50% 50%);
+}
+
+.card .imgBx {
+  z-index: 1;
+  max-width: 100%;
+}
+
+.card .imgBx img {
+  max-width: 100%;
+  transform: scale(1.2) rotate(-20deg);
+  transition: 0.5s;
+}
+
+.card:hover .imgBx img {
+  max-width: 90%;
+  transform: scale(1.2) rotate(20deg);
+}
+
+.card .content {
+  z-index: 1;
+  text-align: center;
+}
+
+.card h3 {
+  color: #121212;
+  font-size: 26pt;
+  text-transform: uppercase;
+  font-weight: 700px;
+  letter-spacing: 1;
+}
+
+
+
+.card .content .price {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1;
+  color: #121212;
+  transition: .5s;
+}
+
+.card a {
+  background-color: #f26480;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: .5s;
+  display: inline-block;
+  z-index: 1;
+  position: absolute;
+  bottom: -50px;
+}
+
+.card:hover a {
+  bottom: 18px;
+}
+
+.card:hover .price {
+  font-size: 18px;
+}
+
+.card:nth-child(2):after {
+  background-color: #ffbf00;
+}
+
+.card:nth-child(2) a {
+  background-color: #ffbf00;
+
+}
+
+.card:nth-child(3):after {
+  background-color: #F3950D
+}
+
+.card:nth-child(3) a {
+  background-color: #F3950D;
+}
